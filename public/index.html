@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title></title>
+</head>
+<body>
+<h1>BackEnd project: Timestamp Microservice</h1>
+
+<div class="story">User Story I: I can pass a string as a parameter, and it will check to see whether that string
+    contains either a
+    unix timestamp or a natural language date (example: January 1, 2016).
+</div>
+<div class="story">User Story II: If it does, it returns both the Unix timestamp and the natural language form of that
+    date.
+</div>
+<div class="story">User Story III: If it does not contain a date or Unix timestamp, it returns null for those
+    properties.
+</div>
+<div>Example usage:</div>
+<div class="example">localhost:8000/December%2015,%202015</div>
+<div class="example">localhost:8000/1450137600</div>
+<div>Example output:</div>
+<div class="example">{ "unix": 1450137600, "natural": "December 15, 2015" }</div>
+</body>
+</html>
