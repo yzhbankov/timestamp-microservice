@@ -28,7 +28,6 @@ app.get('/:time', function (req, res) {
         });
     } else if (Date.parse(req.params.time)) {
         naturaltime = req.params.time;
-        console.log(naturaltime);
         var monthNumber;
         unixtime = Date.parse(dateDetermination(naturaltime));
         function dateDetermination(time) {
