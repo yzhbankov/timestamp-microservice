@@ -28,11 +28,12 @@ app.get('/:time', function (req, res) {
         });
     } else if (Date.parse(req.params.time)) {
         naturaltime = req.params.time;
+        console.log(naturaltime);
         var monthNumber;
         unixtime = Date.parse(dateDetermination(naturaltime));
         function dateDetermination(time) {
             var year = time.match(/\d{4}$/);
-            var day = (time.match(/\s\d{2},/)).toString().slice(1, 3);
+            var day = (time.match(/\s\d{2},/) || time.match(/\s\d{1},/)).toString().slice(1, 3);
             month.map(function (el, index) {
                 if (time.match(el)) {
                     monthNumber = index + 1;
